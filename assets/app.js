@@ -82,31 +82,7 @@ d3.csv("assets/data.csv").then(function(stateData) {
       .attr("font-size", "10px")
       .attr("text-anchor", "middle")
       .attr("fill", "white");
-    
-
-    // Step 6: Initialize tool tip
-    // ==============================
-    var toolTip = d3.tip()
-      .attr("class", "tooltip")
-      .offset([80, -60])
-      .html(function(d) {
-        return (`${d.rockband}<br>Hair length: ${d.hair_length}<br>Hits: ${d.num_hits}`);
-      });
-
-    // // Step 7: Create tooltip in the chart
-    // // ==============================
-    // chartGroup.call(toolTip);
-
-    // // Step 8: Create event listeners to display and hide the tooltip
-    // // ==============================
-    // circlesGroup.on("click", function(data) {
-    //   toolTip.show(data, this);
-    // })
-    //   // onmouseout event
-    //   .on("mouseout", function(data, index) {
-    //     toolTip.hide(data);
-    //   });
-
+     
     // Create axes labels
     chartGroup.append("text")
       .attr("transform", "rotate(-90)")
